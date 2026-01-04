@@ -1,3 +1,3 @@
-def call(){
-  sh "docker push $DOCKERHUB_USER/$IMAGE_NAME:$IMAGE_TAG"
+def call(String DockerHubUser, String ImageName, String ImageTag){
+  sh "docker push ${DockerHubUser}/${ImageName}:${ImageTag}"
 }
